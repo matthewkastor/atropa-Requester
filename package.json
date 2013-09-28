@@ -1,6 +1,6 @@
 {
     "name": "atropa-Requester",
-    "version": "2013.09.27-2334",
+    "version": "2013.09.27-2431",
     "description": "This represents an XMLHttpRequest wrapper.",
     "main": "./src/atropa-Requester.js",
     "directories": {
@@ -43,7 +43,7 @@
         }
     ],
     "dependencies": {
-        "atropa-header": "*",
-        "atropa-ArgsInfo": "*"
+        "atropa-header": "git+https://github.com/matthewkastor/atropa-header.git#master",
+        "atropa-ArgsInfo": "git+https://github.com/matthewkastor/atropa-ArgsInfo.git#master"
     }
 }
