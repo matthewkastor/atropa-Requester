@@ -1,6 +1,6 @@
 {
     "name": "atropa-Requester",
-    "version": "2013.09.30-2143",
+    "version": "2013.09.30-2243",
     "description": "This represents an XMLHttpRequest wrapper.",
     "main": "./src/atropa-Requester.js",
     "directories": {
@@ -21,7 +21,9 @@
         "buildBrowserModule": "node dev/browserify.js",
         "buildDocs": "jsdoc-toolkit -v -d=./docs/jsdoc/ -r -s src/",
         "lint": "atropa-jslint ./src/atropa-Requester.js",
-        "srcFormat": "atropa-jsformatter ./src/atropa-Requester.js ./src/atropa-Requester.js"
+        "srcFormat": "atropa-jsformatter ./src/atropa-Requester.js ./src/atropa-Requester.js",
+        "prestart": "node dev/browserify.js",
+        "pretest": "node dev/browserify.js"
     },
     "homepage": "https://github.com/matthewkastor/atropa-Requester/",
     "bugs": "https://github.com/matthewkastor/atropa-Requester/issues",
