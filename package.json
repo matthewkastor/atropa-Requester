@@ -23,7 +23,8 @@
         "lint": "atropa-jslint ./src/atropa-Requester.js",
         "srcFormat": "atropa-jsformatter ./src/atropa-Requester.js ./src/atropa-Requester.js",
         "prestart": "node dev/browserify.js",
-        "pretest": "node dev/browserify.js"
+        "pretest": "node dev/browserify.js",
+        "buildVsdocs": "jsdoc-toolkit -v -d=./docs/vsdoc/ -t=./dev/vsdoc/ -r -s src/"
     },
     "homepage": "https://github.com/matthewkastor/atropa-Requester/",
     "bugs": "https://github.com/matthewkastor/atropa-Requester/issues",
