@@ -1,6 +1,6 @@
 {
     "name": "atropa-Requester",
-    "version": "2013.09.30-2138",
+    "version": "2013.09.30-2143",
     "description": "This represents an XMLHttpRequest wrapper.",
     "main": "./src/atropa-Requester.js",
     "directories": {
@@ -12,9 +12,11 @@
         "atropa-jslint": ">=0.1.2",
         "browserify": ">=2.29.1",
         "jasmine-node": ">=1.11.0",
-        "jsdoc-toolkit": "git+https://github.com/matthewkastor/node-jsdoc-toolkit.git#fix-tests"
+        "jsdoc-toolkit": "git+https://github.com/matthewkastor/node-jsdoc-toolkit.git#fix-tests",
+        "atropa-server": "git+https://github.com/matthewkastor/atropa-server.git#master"
     },
     "scripts": {
+        "start" : "node server.js",
         "test": "jasmine-node specs/",
         "buildBrowserModule": "node dev/browserify.js",
         "buildDocs": "jsdoc-toolkit -v -d=./docs/jsdoc/ -r -s src/",
