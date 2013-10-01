@@ -45,7 +45,7 @@ describe('atropa.Requester', function () {
                     runs(function () {
                         requester.makeRequest(
                             'GET',
-                            'Toolbox/test/dummyScript.js',
+                            'dummyScript.js',
                             null,
                             function (status, data) {
                                 stat = true;
