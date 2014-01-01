@@ -5,7 +5,7 @@
 		<meta http-equiv="content-type" content="text/html; charset=utf8" />
 		<meta name="generator" content="JsDoc Toolkit" />
 		
-		<title>JsDoc Reference - atropa.Requester</title>
+		<title>JsDoc Reference - atropa.ArgsInfo</title>
 
 		<style type="text/css">
 			/* default.css */
@@ -208,26 +208,26 @@ ul.inheritsList
 <!-- ============================== class title ============================ -->
 			<h1 class="classTitle">
 				
-				Class atropa.Requester
+				Class atropa.ArgsInfo
 			</h1>
 
 <!-- ============================== class summary ========================== -->			
 			<p class="description">
 				<br />Version
-					20130311.<br />
+					20130221.<br />
 				
 				
 			
-				This represents an XMLHttpRequest.
+				This represents a filter for arguments based on type.
 				
 				
-					<br /><i>Defined in: </i> &lt;src/atropa-Requester.js&gt;.
+					<br /><i>Defined in: </i> &lt;node_modules/atropa-ArgsInfo/src/atropa-ArgsInfo.js&gt;.
 				
 			</p>
 
 <!-- ============================== constructor summary ==================== -->			
 			
-			<table class="summaryTable" cellspacing="0" summary="A summary of the constructor documented in the class atropa.Requester.">
+			<table class="summaryTable" cellspacing="0" summary="A summary of the constructor documented in the class atropa.ArgsInfo.">
 				<caption>Class Summary</caption>
 				<thead>
 					<tr>
@@ -240,9 +240,9 @@ ul.inheritsList
 						<td class="attributes">&nbsp;</td>
 						<td class="nameDescription" >
 							<div class="fixedFont">
-								<b><a href="../symbols/atropa.Requester.html#constructor">atropa.Requester</a></b>()
+								<b><a href="../symbols/atropa.ArgsInfo.html#constructor">atropa.ArgsInfo</a></b>()
 							</div>
-							<div class="description">This represents an XMLHttpRequest.</div>
+							<div class="description">This represents a filter for arguments based on type.</div>
 						</td>
 					</tr>
 				</tbody>
@@ -251,50 +251,12 @@ ul.inheritsList
 
 <!-- ============================== properties summary ===================== -->
 			
-				
-				
-				<table class="summaryTable" cellspacing="0" summary="A summary of the fields documented in the class atropa.Requester.">
-					<caption>Field Summary</caption>
-					<thead>
-						<tr>
-							<th scope="col">Field Attributes</th>
-							<th scope="col">Field Name and Description</th>
-						</tr>
-					</thead>
-					<tbody>
-					
-						<tr>
-							<td class="attributes">&nbsp;</td>
-							<td class="nameDescription">
-								<div class="fixedFont">
-								<b><a href="../symbols/atropa.Requester.html#requestHeaders">requestHeaders</a></b>
-								</div>
-								<div class="description">Object whose properties and values are header names and values respectively.</div>
-							</td>
-						</tr>
-					
-						<tr>
-							<td class="attributes">&nbsp;</td>
-							<td class="nameDescription">
-								<div class="fixedFont">
-								<b><a href="../symbols/atropa.Requester.html#timeout">timeout</a></b>
-								</div>
-								<div class="description">Set the timeout value for the request in milliseconds.</div>
-							</td>
-						</tr>
-					
-					</tbody>
-				</table>
-				
-				
-				
-			
 
 <!-- ============================== methods summary ======================== -->
 			
 				
 				
-				<table class="summaryTable" cellspacing="0" summary="A summary of the methods documented in the class atropa.Requester.">
+				<table class="summaryTable" cellspacing="0" summary="A summary of the methods documented in the class atropa.ArgsInfo.">
 					<caption>Method Summary</caption>
 					<thead>
 						<tr>
@@ -307,9 +269,28 @@ ul.inheritsList
 						<tr>
 							<td class="attributes">&nbsp;</td>
 							<td class="nameDescription">
-								<div class="fixedFont"><b><a href="../symbols/atropa.Requester.html#makeRequest">makeRequest</a></b>(method, url, messageBody, callback)
+								<div class="fixedFont"><b><a href="../symbols/atropa.ArgsInfo.html#checkArgTypes">checkArgTypes</a></b>(args)
 								</div>
-								<div class="description">Makes an AJAX request.</div>
+								<div class="description">Checks the given arguments object against the expected
+arguments types.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/atropa.ArgsInfo.html#getArgTypes">getArgTypes</a></b>(args)
+								</div>
+								<div class="description">Gets the types of arguments.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/atropa.ArgsInfo.html#setExpectedArgTypes">setExpectedArgTypes</a></b>(typesObj)
+								</div>
+								<div class="description">Sets the expected argument types.</div>
 							</td>
 						</tr>
 					
@@ -330,17 +311,48 @@ ul.inheritsList
 				</div>
 				
 				<div class="fixedFont">
-						<b>atropa.Requester</b>()
+						<b>atropa.ArgsInfo</b>()
 				</div>
 				
 				<div class="description">
-					This represents an XMLHttpRequest.
-					<br /><i>Author: </i><a href="mailto:matthewkastor@gmail.com"> Matthew Christopher Kastor-Inare III </a><br /> ☭ Hial Atropa!! ☭.
+					This represents a filter for arguments based on type.
+					<br /><i>Author: </i><a href="mailto:matthewkastor@gmail.com">
+ Matthew Christopher Kastor-Inare III </a><br />
+ ☭ Hial Atropa!! ☭.
 				</div>
 				
 				
 				
-				<pre class="code">var requester, formData;requester = new atropa.Requester();requester.timeout = 10000; // requests will abort after 10 seconds.requester.requestHeaders = {    "aHeader" : "headerValue",    "anotherHeader" : "andValue"};function showRequestResults(status, request) {    console.log("Status: ' + status);    console.dir(request); // console dir may or may not                       // be supported in your environment.}formData = new FormData();formData.append('aFormFieldName', 'formFieldData');formData.append('anotherFormFieldName', 'andData');requester.makeRequest(    "post", "http://example.com", formData, showRequestResults);</pre>
+				<pre class="code">function myClassyConstructor(takes, a, few, args) {
+    var expectedArgTypes, checker;
+    
+    expectedArgTypes = {};
+    expectedArgTypes.requestWithMessage = 
+         ['string', 'string', 'string', 'function'];
+    expectedArgTypes.requestNullMessage = 
+         ['string', 'string', 'object', 'function'];
+    
+    checker = new atropa.ArgsInfo();
+    checker.setExpectedArgTypes(expectedArgTypes);
+    
+    try {
+    
+        // Check the supplied arguments pseudo array's argument types
+        // if the pattern of types in arguments matches one of the
+        // patterns set on expectedArgTypes then the matching pattern
+        // will be returned. Otherwise, an error will be thrown.
+        
+        checker.checkArgTypes(arguments);
+    } catch (e) {
+    
+        // Invalid argument types supplied. Handle
+        // the error or bail.
+        
+    }
+    
+    // the arguments supplied will be of the proper type
+    // your function can go ahead and do things with them
+}</pre>
 				
 				
 				
@@ -353,7 +365,7 @@ ul.inheritsList
 						<dl class="detailList">
 						<dt class="heading">Returns:</dt>
 						
-								<dd><span class="light fixedFont">{Requester}</span> Returns a requester object.</dd>
+								<dd><span class="light fixedFont">{ArgsInfo}</span> Returns an ArgsInfo filter.</dd>
 						
 						</dl>
 					
@@ -361,7 +373,7 @@ ul.inheritsList
 						<dl class="detailList">
 						<dt class="heading">Requires:</dt>
 						
-							<dd><a href="../symbols/atropa.ArgsInfo.html#checkArgTypes">atropa.ArgsInfo#checkArgTypes</a></dd>
+							<dd>atropa.arrays.match</dd>
 						
 						</dl>
 					
@@ -369,7 +381,7 @@ ul.inheritsList
 						<dl class="detailList">
 						<dt class="heading">See:</dt>
 						
-							<dd><a href="../../../AtropaToolboxTests.html?spec=atropa.Requester">tests</a></dd>
+							<dd><a href="../../../AtropaToolboxTests.html?spec=atropa.ArgsInfo">tests</a></dd>
 						
 						</dl>
 					
@@ -379,55 +391,6 @@ ul.inheritsList
 
 <!-- ============================== field details ========================== -->		
 			
-				<div class="sectionTitle">
-					Field Detail
-				</div>
-				
-					<a name="requestHeaders"> </a>
-					<div class="fixedFont">
-					
-					<span class="light">{Request Headers Object}</span>
-					<b>requestHeaders</b>
-					
-					</div>
-					<div class="description">
-						Object whose properties and values are header names and values respectively.
-						
-						
-					</div>
-					
-					
-
-						
-						
-						
-						
-
-					<hr />
-				
-					<a name="timeout"> </a>
-					<div class="fixedFont">
-					
-					<span class="light">{Number}</span>
-					<b>timeout</b>
-					
-					</div>
-					<div class="description">
-						Set the timeout value for the request in milliseconds. The request will abort after this amount of time has passed.
-						
-						
-					</div>
-					
-					
-
-						
-						
-						
-						
-
-					
-				
-			
 
 <!-- ============================== method details ========================= -->		
 			
@@ -435,17 +398,20 @@ ul.inheritsList
 					Method Detail
 				</div>
 				
-					<a name="makeRequest"> </a>
+					<a name="checkArgTypes"> </a>
 					<div class="fixedFont">
 					
-					
-					<b>makeRequest</b>(method, url, messageBody, callback)
+					<span class="light">{String}</span>
+					<b>checkArgTypes</b>(args)
 					
 					</div>
 					<div class="description">
-						Makes an AJAX request.
+						Checks the given arguments object against the expected
+arguments types.
 						
-						<br /><i>Author: </i><a href="mailto:matthewkastor@gmail.com"> Matthew Christopher Kastor-Inare III </a><br /> ☭ Hial Atropa!! ☭.
+						<br /><i>Author: </i><a href="mailto:matthewkastor@gmail.com">
+ Matthew Christopher Kastor-Inare III </a><br />
+ ☭ Hial Atropa!! ☭.
 					</div>
 					
 					
@@ -455,28 +421,10 @@ ul.inheritsList
 							<dt class="heading">Parameters:</dt>
 							
 								<dt>
-									<span class="light fixedFont">{String}</span> <b>method</b>
+									<span class="light fixedFont">{arguments}</span> <b>args</b>
 									
 								</dt>
-								<dd>The HTTP method to be used for this request.</dd>
-							
-								<dt>
-									<span class="light fixedFont">{String}</span> <b>url</b>
-									
-								</dt>
-								<dd>The URL to send the request to.</dd>
-							
-								<dt>
-									<span class="light fixedFont">{String}</span> <b>messageBody</b>
-									
-								</dt>
-								<dd>The body of the request.</dd>
-							
-								<dt>
-									<span class="light fixedFont">{Object}</span> <b>callback</b>
-									
-								</dt>
-								<dd>The callback function to execute when readyState is 4. The callback is supplied with two arguments. The first argument is a boolean indicating whether or not the http status was 200. The second argument is the request object.</dd>
+								<dd>An arguments object</dd>
 							
 							</dl>
 						
@@ -487,9 +435,134 @@ ul.inheritsList
 							<dt class="heading">Throws:</dt>
 							
 								<dt>
-									 <b></b>
+									<span class="light fixedFont">{atropa.customErrors.InvalidArgumentTypesError}</span>  <b></b>
 								</dt>
-								<dd>atropa.Requester.makeRequest unexpected argument type</dd>
+								<dd>Throws an error if no matching
+ pattern of argument types can be found for <code>args</code></dd>
+							
+							</dl>
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{String}</span> The user assigned key which matches the
+arguments supplied, or throws an error.</dd>
+							
+							</dl>
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">See:</dt>
+							
+								<dd><a href="../symbols/atropa.ArgsInfo.html#setExpectedArgTypes">atropa.ArgsInfo#setExpectedArgTypes</a></dd>
+							
+							</dl>
+						
+
+					<hr />
+				
+					<a name="getArgTypes"> </a>
+					<div class="fixedFont">
+					
+					<span class="light">{Array}</span>
+					<b>getArgTypes</b>(args)
+					
+					</div>
+					<div class="description">
+						Gets the types of arguments.
+						
+						<br /><i>Author: </i><a href="mailto:matthewkastor@gmail.com">
+ Matthew Christopher Kastor-Inare III </a><br />
+ ☭ Hial Atropa!! ☭.
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{arguments}</span> <b>args</b>
+									
+								</dt>
+								<dd>An arguments object, or anything you want to
+check the type of.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{Array}</span> Returns an array of the types of arguments passed in.</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name="setExpectedArgTypes"> </a>
+					<div class="fixedFont">
+					
+					
+					<b>setExpectedArgTypes</b>(typesObj)
+					
+					</div>
+					<div class="description">
+						Sets the expected argument types.
+						
+						<br /><i>Author: </i><a href="mailto:matthewkastor@gmail.com">
+ Matthew Christopher Kastor-Inare III </a><br />
+ ☭ Hial Atropa!! ☭.
+					</div>
+					
+					
+					
+					<pre class="code">// typesObj is expected to be of the form:
+
+var typesObj = {
+    "namedArgumentTypesArray" : ["string", "function", "number"],
+    "namedAlternateArgumentTypesArray" : ["object", "function", "number"]
+};
+
+// You may use as many named arrays as you wish and checkArgTypes will
+// test for a match to at least one of the provided named arrays.</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{Expected Arg Types}</span> <b>typesObj</b>
+									
+								</dt>
+								<dd>An object containing information
+ about the types of arguments you expect. Specifically, the object should
+ look like the example.</dd>
+							
+							</dl>
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Throws:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{atropa.customErrors.InvalidArgumentTypesError}</span>  <b></b>
+								</dt>
+								<dd>Throws an error if the
+ typesObj can not be used to set the expected argument types.</dd>
 							
 							</dl>
 						
