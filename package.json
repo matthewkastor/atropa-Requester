@@ -1,6 +1,6 @@
 {
   "name": "atropa-Requester",
-  "version": "2013.10.15",
+  "version": "2013.10.16",
   "description": "This represents an XMLHttpRequest wrapper.",
   "main": "./src/atropa-Requester.js",
   "directories": {
