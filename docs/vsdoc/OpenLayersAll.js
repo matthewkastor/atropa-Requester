@@ -25,9 +25,11 @@
     
 
     window.atropa = {
-        /// <summary></summary>
-        /// <field name="data" type="">Container for gobal data related to the classes and functions.</field>
+        /// <summary>Container for all Glorious classes, functions, etc.</summary>
         /// <returns type="atropa"/>
+      
+        /// <field name="data" type="">Container for gobal data related to the classes and functions.</field>
+        data : {}, 
                 
         supportCheck: function(className, errorMessage) {
             /// <summary>Checks whether this class has been marked as unsupported and throws an 
@@ -69,8 +71,7 @@
     window.atropa = window.atropa || {};
 
     window.atropa.ArgsInfo = function(){
-        /// <summary></summary>
-        /// <returns type="atropa.ArgsInfo"/>
+        /// <summary>This represents a filter for arguments based on type.</summary>
     };
 
     var $x = window.atropa.ArgsInfo;
@@ -112,7 +113,7 @@
     window.atropa = window.atropa || {};
 
     window.atropa.data = {
-        /// <summary></summary>
+        /// <summary>Container for gobal data related to the classes and functions.</summary>
         /// <returns type="atropa.data"/>
                 
     };
@@ -132,12 +133,13 @@
     window.atropa = window.atropa || {};
 
     window.atropa.Requester = function(){
-        /// <summary></summary>
-        /// <field name="requestHeaders" type="Request Headers Object">Object whose properties and values are header names and values
+        /// <summary>This represents an XMLHttpRequest.</summary>
+        /// <field name="requestHeaders" type="Object">Object whose properties and values are header names and values
         ///  respectively.</field>
+        requestHeaders : new Object(), 
         /// <field name="timeout" type="Number">Set the timeout value for the request in milliseconds. The request will
         ///  abort after this amount of time has passed.</field>
-        /// <returns type="atropa.Requester"/>
+        timeout : new Number(), 
     };
 
     var $x = window.atropa.Requester;

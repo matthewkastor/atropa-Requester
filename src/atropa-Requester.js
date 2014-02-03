@@ -106,7 +106,7 @@ atropa.Requester = function Requester() {
     /**
      * Object whose properties and values are header names and values
      *  respectively.
-     * @type Request Headers Object
+     * @type Object
      * @fieldOf atropa.Requester#
      */
     this.requestHeaders = {};
